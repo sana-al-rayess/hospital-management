@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/login.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+
+
+    <title>Hospital Project</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <div class="logo-div">
+                <img class="logo" src="./images/PngItem_5154167.png" alt="Logo">
+            </div>
+            <div class="shop-name">
+                Hospital
+            </div>
+        </div>
+       
+    </header>
+  
+    
+
+    <div class="all-wrap">
+        <div class="image-wrap">
+
+            <div>
+                <img class="image-diamond" src="./images/PngItem_5154167.png" alt="Logo">
+            </div>
+            <div class="shop-name1">
+                Hospital
+            </div>
+        </div>
+
+        <div class="signup-wrap">
+            <form id="login-form" method="POST" action="login-api.php">
+            <div class="signup-top">
+                <h2 class="signup-header">Login</h2>
+                
+               
+                <div class="input-wrap">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="input-wrap">
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </div>
+           
+                <div class="input-wrap">
+                    <button type="button" onclick="login()">Login</button>
+                    
+                </div>
+                <div class="down">
+                <div class="input-wrap">
+                </form>
+            
+                <div id="error-message">
+                    <?php echo isset($_SESSION['error_message']) ? $_SESSION['error_message'] : ''; ?>
+                  </div>
+                   
+                    <p class="terms">Not a member?<a style="text-decoration: none;" href="../frontend/signup-menu.html"><span>  Signup now</span></a></p>
+                </div>
+               
+            </div>
+            </div>
+
+            <script src="login.js"></script>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="slogan">
+            <div><img class="logo" src="./images/PngItem_5154167.png" alt="Logo"></div><br>
+            <div><b>Hospital</b></div><br>
+            <div
+                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Beirut, Lebanon</div>
+            <div
+                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            </div>
+
+        </div>
+        <div class="socialmedia">
+            <div>Connect With Us</div><br>
+            <div class="socialmedia-item">
+                <div><img class="icons" src="./images/insta.png" alt="insta"></div>
+                <div class="socialmedia-name">Hospital</div>
+            </div>
+            <div class="socialmedia-item">
+                <div><img class="icons" src="./images/fb2.png" alt="fb"></div>
+                <div class="socialmedia-name">Hospital</div>
+            </div>
+            <div class="socialmedia-item">
+                <div><img class="icons" src="./images/mail.png" alt="mail"></div>
+                <div class="socialmedia-name">hospital@hospital.com</div>
+            </div>
+            <div class="socialmedia-item">
+                <div><img class="icons" src="./images/telephone-62.png" alt="telephone"></div>
+                <div class="socialmedia-name">+961 3 123456</div>
+            </div>
+
+        </div>
+        <div class="newsletter">
+            <div>Newsletter</div>
+            <div class="form">
+                <form>
+                    <input type="email" id="email-input" name="email" placeholder="Enter your email address">
+                    <button class="subscribe-button" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="space"></div>
+
+
+        </div>
+
+        </div>
+    </footer>
+    
+</body>
+
+</html>
