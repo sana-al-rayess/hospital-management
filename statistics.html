@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+</head>
+<body>
+    <h1>Statistics: How mamy patient is each hospital?</h1>
+    <div id="patient-count-chart"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#patient-count-chart").text("Loading...");
+
+            $.ajax({
+                url: "http://localhost/hospital-management/statistics.php",
+                dataType: "json",
+                success: function(data) {
+                    if (data.length > 0) {
+                        
+                        var table = "<table><thead><tr><th>Hospital</th><th>Patient Count</th></tr></thead><tbody>";
+
+                        for (var i = 0; i < data.length; i++) {
+                            table += "<tr><td>" + data[i].hospital + "</td><td>" + data[i].patient_count + "</td></tr>";
+                        }
+
+                        table += "</tbody></table>";
+
+                        $("#patient-count-chart").html(table);
+                    } else {
+                        $("#patient-count-chart").text("No results found");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    $("#patient-count-chart").text("An error occurred while fetching data");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
