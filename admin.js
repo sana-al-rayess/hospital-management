@@ -18,4 +18,25 @@ function loadHospitals() {
     xhr.send();
   }
   
-  
+  function loadDepartments() {
+    const xhr = new XMLHttpRequest();
+    const hospitalId = document.getElementById("hospital-dropdown").value;
+    xhr.open('GET', `get_departments.php?hospital_id=${hospitalId}`);
+    xhr.onload = function() {
+      if(xhr.status === 200) {
+        const departments = JSON.parse(xhr.responseText);
+        const dropdown = document.getElementById("department-dropdown");
+        dropdown.innerHTML = "";
+        departments.forEach(department => {
+          const option = document.createElement("option");
+          option.text = department.name;
+          option.value = department.id;
+          dropdown.add(option);
+        });
+      } else {
+        console.log('Error: ' + xhr.status);
+      }
+    };
+    xhr.send();
+  }
+
