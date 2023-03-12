@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin-Assign a user</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+
+<header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="admin.html">Home</a></li>
+            <li><a href="assign-patient.html">Assign Patient</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Patients</a></li>
+            <li><a href="#">Statistics</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<h1>Assign Patient to Hospital</h1><br><br>
+<form>
+
+    <body onload="loadHospitals(), getUsers()"></body>
+    <form>
+        <label for="user-dropdown">Select a user:</label>
+        <select id="user-dropdown">
+            <option value="" selected>Select a user</option>
+        </select><br><br>
+
+        <label for="hospital-dropdown">Select a hospital:</label>
+        <select id="hospital-dropdown">
+            <option value="" selected>Select a hospital</option>
+        </select>
+
+
+        <br><br>
+
+        <label for="date-joined">Date Joined:</label>
+        <input type="date" id="date-joined"><br><br>
+
+        <label for="date-left">Date Left:</label>
+        <input type="date" id="date-left"><br><br>
+
+        <label for="active-dropdown">Active:</label>
+        <select id="active-dropdown">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <input type="button" value="Assign Patient" onclick="assignPatient()">
+    </form>
+
+    <div id="message"></div>
+
+</form>
+<script src="admin.js"></script>
+
+</body>
+
+</html>
+
+ 
