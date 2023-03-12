@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name FROM users";
+$sql = "SELECT id, name FROM users where type = '3'";
 $result = $conn->query($sql);
 
 $users = array();

@@ -1,15 +1,12 @@
 
 <?php
-// establish database connection
+
 $servername = "localhost";
 $username = "root";
 $password = NULL;
 $dbname = "healthcaredb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -39,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       header("Location: login.html");
       exit();
     }
-  }
+  
  
 ?>
 

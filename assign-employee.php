@@ -17,7 +17,7 @@ $date_left = $_POST["date_left"];
 $date_joined = $_POST["date_joined"];
 $position = $_POST["position"];
 
-// $sql = "INSERT INTO hospital_users (user_id, hospital_id, date_joined, date_left, is_active) VALUES ('$user_id', '$hospital_id', '$date_joined', '$date_left', '$is_active')";
+
 $sql="INSERT INTO employee_infos (user_id, hospital_id, ssn, position, date_joined, date_left) VALUES ('$user_id', '$hospital_id', '$ssn', '$position', '$date_joined', '$date_left')";
 
 
