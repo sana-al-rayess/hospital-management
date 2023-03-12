@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin-Assign a user</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+
+<header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="admin.html">Home</a></li>
+            <li><a href="assign-patient.html">Assign Patient</a></li>
+            <li><a href="assign-employee.html">Assign Employees</a></li>
+            <li><a href="#">Patients</a></li>
+            <li><a href="#">Statistics</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<h1>Assign Employee to Hospital</h1><br><br>
+<form>
+
+    <body onload="loadHospitals(), getEmployees()"></body>
+    <form>
+        <label for="user-dropdown">Select an Employee:</label>
+        <select id="user-dropdown">
+            <option value="" selected>Select a user</option>
+        </select><br><br>
+
+        <label for="hospital-dropdown">Select a hospital:</label>
+        <select id="hospital-dropdown">
+            <option value="" selected>Select a hospital</option>
+        </select>
+
+
+        <br><br>
+        <label for="ssn">SSN:</label>
+        <input type="text" id="ssn"><br><br>
+
+        <label for="date-joined">Date Joined:</label>
+        <input type="date" id="date-joined"><br><br>
+
+        <label for="date-left">Date Left:</label>
+        <input type="date" id="date-left"><br><br>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position">
+        <br><br>
+
+        <input type="button" value="Assign Employee" onclick="assignEmployee()">
+    </form>
+
+    <div id="message"></div>
+
+</form>
+<script src="admin.js"></script>
+
+</body>
+
+</html>
+
+ 
