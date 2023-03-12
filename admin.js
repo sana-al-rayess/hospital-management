@@ -61,4 +61,36 @@ function getUsers() {
     xhr.send();
   }
   
+  function assignPatient() {
+    const userId = document.getElementById("user-dropdown").value;
+    const hospitalId = document.getElementById("hospital-dropdown").value;
+    const dateJoined = document.getElementById("date-joined").value;
+    const dateLeft = document.getElementById("date-left").value;
+    const isActive = document.getElementById("active-dropdown").value;
+  
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "assign-hosp.php");
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        const message = document.getElementById("message");
+        message.innerHTML = response.message;
+      } else {
+        console.log("Error: " + xhr.status);
+      }
+    };
+    const params =
+      "user_id=" +
+      userId +
+      "&hospital_id=" +
+      hospitalId +
+      "&date_joined=" +
+      dateJoined +
+      "&date_left=" +
+      dateLeft +
+      "&is_active=" +
+      isActive;
+    xhr.send(params);
+  }
   
