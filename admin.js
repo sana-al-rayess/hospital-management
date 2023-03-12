@@ -93,4 +93,22 @@ function getUsers() {
       isActive;
     xhr.send(params);
   }
-  
+  function getEmployees() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'get-employees.php');
+    xhr.onload = function() {
+      if(xhr.status === 200) {
+        const users = JSON.parse(xhr.responseText);
+        const dropdown = document.getElementById("user-dropdown");
+        users.forEach(user => {
+          const option = document.createElement("option");
+          option.text = user.name;
+          option.value = user.id;
+          dropdown.add(option);
+        });
+      } else {
+        console.log('Error: ' + xhr.status);
+      }
+    };
+    xhr.send();
+  }
