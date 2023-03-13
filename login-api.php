@@ -14,7 +14,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     $sql = "SELECT u.type, t.type as user_type FROM users u INNER JOIN user_types t ON u.type = t.id WHERE email='$email' AND password='$password'";
     $result = $conn->query($sql);
   
-    // if the user exists, set session variables and redirect to appropriate page based on user type
+    
     if ($result->num_rows == 1) {
       $row = $result->fetch_assoc();
       session_start();

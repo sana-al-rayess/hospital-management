@@ -4,67 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/patient.css" />
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Hospitals</a></li>
-        <li><a href="#">Departments</a></li>
-        <li><a href="#">Rooms</a></li>
-        <li><a href="#">Medications</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Invoice</a></li>
-      </ul>
+     <h1>Patient Panel</h1>
     </nav>
-    <main>
-      <h1>Welcome, [patient name]</h1>
-      <p>You are currently assigned to [hospital name], [department name], [room name], bed [bed number].</p>
-      <section>
-        <h2>Medications</h2>
-        <ul>
-          <li><span class="medication-name">Medication 1</span> - <span class="medication-description">Description of medication 1</span> <button>Take</button></li>
-          <li><span class="medication-name">Medication 2</span> - <span class="medication-description">Description of medication 2</span> <button>Take</button></li>
-          <li><span class="medication-name">Medication 3</span> - <span class="medication-description">Description of medication 3</span> <button>Take</button></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Services</h2>
-        <ul>
-          <li><span class="service-name">Meal</span> - <span class="service-description">Description of meal service</span> <button>Request</button></li>
-          <li><span class="service-name">Transportation</span> - <span class="service-description">Description of transportation service</span> <button>Request</button></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Invoice</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Cost</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Meal</td>
-              <td>$10</td>
-              <td>Approved</td>
-            </tr>
-            <tr>
-              <td>Transportation</td>
-              <td>$20</td>
-              <td>Declined</td>
-            </tr>
-            <tr>
-              <td>Total</td>
-              <td>$30</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+    
+    <h1>Assign Patient to Hospital</h1><br><br>
+    <form>
+    
+        <body onload="loadHospitals(), getUsers()"></body>
+        <form>
+           
+            <body onload="loadHospitals()">
+              <label for="hospital-dropdown">Select a hospital:</label>
+              <select id="hospital-dropdown" onchange="loadDepartments()"></select>
+              
+              <br><br>
+              
+              <label for="department-dropdown">Select a department:</label>
+              <select id="department-dropdown"></select>
+            </select><br><br>
+    
+      
+
   </body>
+  <script src="admin.js"></script>
 </html>

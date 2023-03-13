@@ -36,7 +36,7 @@
         </div>
 
         <div class="signup-wrap">
-            <form id="login-form" method="POST" action="login-api.php">
+            <!-- <form id="login-form" method="POST" action="login-api.php">
             <div class="signup-top">
                 <h2 class="signup-header">Login</h2>
                 
@@ -61,7 +61,31 @@
                   </div>
                    
                     <p class="terms">Not a member?<a style="text-decoration: none;" href="../frontend/signup-menu.html"><span>  Signup now</span></a></p>
-                </div>
+                </div> -->
+                <form id="login-form" method="POST" action="login-api.php">
+                    <div class="signup-top">
+                      <h2 class="signup-header">Login</h2>
+                      
+                      <div class="input-wrap">
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                      </div>
+                      
+                      <div class="input-wrap">
+                        <input type="password" id="password" name="password" required placeholder="Password">
+                      </div>
+                      
+                      <div class="input-wrap">
+                        <button type="button" onclick="login()">Login</button>
+                      </div>
+                      
+                      <div id="error-message">
+                        <?php echo isset($_SESSION['error_message']) ? $_SESSION['error_message'] : ''; ?>
+                      </div>
+                      
+                      <p class="terms">Not a member?<a style="text-decoration: none;" href="../frontend/signup-menu.html"><span>  Signup now</span></a></p>
+                    </div>
+                  </form>
+                  
                
             </div>
             </div>
