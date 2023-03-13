@@ -60,7 +60,7 @@ select {
 
 /* Style the submit button */
 button[type="submit"] {
-  background-color: #FF5733;
+  background-color: #04BFBF;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -72,7 +72,22 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #f44336;
+  background-color: #057070;
+}
+button{
+  background-color: #04BFBF;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #057070;
 }
 
 /* Style the footer */
