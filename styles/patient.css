@@ -1,37 +1,93 @@
+/* Apply a background image with hospital-related visuals */
+body {
+  background: url("../images/med.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Style the navigation bar */
 nav {
-    background-color: #63BFB6;
-    padding: 20px;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  ul li button {
-    background-color: #63BFB6;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  ul li button:hover {
-    background-color: #52a9a2;
-  }
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+nav h1 {
+  color:  #04BFBF;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px  #017a7a;
+}
+
+/* Style the main heading */
+h1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px #000000;
+}
+
+/* Style the form */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  width: 50%;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color:  #04BFBF;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #FF5733;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #f44336;
+}
+
+/* Style the footer */
+footer {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #FF5733;
+}
