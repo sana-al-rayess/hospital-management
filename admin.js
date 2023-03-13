@@ -150,4 +150,24 @@ function getUsers() {
     xhr.send(params);
   }
 
-  
+  function loadRooms() {
+    const xhr = new XMLHttpRequest();
+    const departmentId = document.getElementById("department-dropdown").value;
+    xhr.open('GET', `get-rooms.php?department_id=${departmentId}`);
+    xhr.onload = function() {
+      if(xhr.status === 200) {
+        const rooms = JSON.parse(xhr.responseText);
+        const dropdown = document.getElementById("room-dropdown");
+        dropdown.innerHTML = "";
+        rooms.forEach(room => {
+          const option = document.createElement("option");
+          option.text = room.name;
+          option.value = room.id;
+          dropdown.add(option);
+        });
+      } else {
+        console.log('Error: ' + xhr.status);
+      }
+    };
+    xhr.send();
+  }

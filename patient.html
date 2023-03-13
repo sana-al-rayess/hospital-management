@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="./styles/patient.css" />
-  </head>
-  <body>
-    <nav>
-     <h1>Patient Panel</h1>
-    </nav>
-    
-    <h1>Assign Patient to Hospital</h1><br><br>
-    <form>
-    
-        <body onload="loadHospitals(), getUsers()"></body>
-        <form>
-           
-            <body onload="loadHospitals()">
-              <label for="hospital-dropdown">Select a hospital:</label>
-              <select id="hospital-dropdown" onchange="loadDepartments()"></select>
-              
-              <br><br>
-              
-              <label for="department-dropdown">Select a department:</label>
-              <select id="department-dropdown"></select>
-            </select><br><br>
-    
-      
 
-  </body>
-  <script src="admin.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="./styles/patient.css" />
+</head>
+
+<body>
+  <nav>
+    <h1>Patient Panel</h1>
+  </nav>
+
+  <h1>Assign Patient to Hospital</h1><br><br>
+  <!--     
+        <body onload="loadHospitals(), getUsers()"></body> -->
+  <form>
+
+    <body onload="loadHospitals()">
+      <label for="hospital-dropdown">Select a hospital:</label>
+      <select id="hospital-dropdown" onchange="loadDepartments()"></select>
+      <br><br>
+
+      <label for="department-dropdown">Select a department:</label>
+      <select id="department-dropdown" onchange="loadRooms()"></select>
+      <br><br>
+
+      <br><br>
+
+      <label for="room-dropdown">Select a room:</label>
+      <select id="room-dropdown"></select>
+
+
+    </body>
+    <script src="admin.js"></script>
+
 </html>
