@@ -1,10 +1,6 @@
 <?php
 header('Content-Type: application/json'); // add this line to set the response type to JSON
-
-$servername = "localhost";
-$username = "root";
-$password = Null;
-$dbname = "healthcaredb";
+include("connection.php"); 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -20,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dob = $_POST['dob'];
     $type = $_POST['type'];
 
-    // Prepare and execute the SQL statement to insert the user data into the database
+    
     $stmt = $conn->prepare("INSERT INTO users (name, email, password, dob, type) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssi", $name, $email, $password, $dob, $type);
     $result = $stmt->execute();
@@ -37,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
     }
 
-    // Return the response message in JSON format
     header('Content-Type: application/json');
     echo json_encode($response);
 }

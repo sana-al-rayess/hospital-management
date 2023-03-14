@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = NULL;
-$dbname = "healthcaredb";
-
-
+include("connection.php"); 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 

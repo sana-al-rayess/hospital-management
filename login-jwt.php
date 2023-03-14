@@ -2,11 +2,7 @@
 // Import the required libraries for JWT token generation
 require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
-
-$servername = "localhost";
-$username = "root";
-$password = NULL;
-$dbname = "healthcaredb";
+include("connection.php"); 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
