@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./styles/login.css">
-
+    <link rel="stylesheet" type="text/css" href="../styles/login.css"> 
 
     <title>Hospital Project</title>
 </head>
-
 <body>
     <header class="header">
         <div class="title">
@@ -21,12 +19,11 @@
         </div>
        
     </header>
-  
-    
+   
 
     <div class="all-wrap">
         <div class="image-wrap">
-
+            
             <div>
                 <img class="image-diamond" src="./images/PngItem_5154167.png" alt="Logo">
             </div>
@@ -34,76 +31,58 @@
                 Hospital
             </div>
         </div>
-
+        
+       
         <div class="signup-wrap">
-            <!-- <form id="login-form" method="POST" action="login-api.php">
+            
             <div class="signup-top">
-                <h2 class="signup-header">Login</h2>
+                <h2 class="signup-header">Sign up</h2>
+                <form id="signup-form">
+                <div class="input-wrap">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="input-wrap">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-wrap">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                             
+                <div class="input-wrap">
+                    <input  type="date" name="dob" id="dob">
+                </div>
+                <div class="input-wrap">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">
+                        <option value="1">Admin</option>
+                        <option value="2">Employee</option>
+                        <option value="3">Patient</option>
+                    </select>
+                </div>
+    
+                <div class="input-wrap">
+                    <input type="checkbox" >
+                    <p class="terms">Accept the <span>Terms and Conditions</span></p>
+                </div>
+                <div class="input-wrap">
+                    <button type="submit" id="submit-button">Signup</button>
+                    <p class="terms">Already have an account? <a style="text-decoration: none;" href="../frontend/login-menu.html"><span>Login</span></a></p>
+                </div>
                 
                
-                <div class="input-wrap">
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                </div>
-                <div class="input-wrap">
-                    <input type="password" id="password" name="password" required placeholder="Password">
-                </div>
-           
-                <div class="input-wrap">
-                    <button type="button" onclick="login()">Login</button>
-                    
-                </div>
-                <div class="down">
-                <div class="input-wrap">
-                </form>
-            
-                <div id="error-message">
-                    <?php echo isset($_SESSION['error_message']) ? $_SESSION['error_message'] : ''; ?>
-                  </div>
-                   
-                    <p class="terms">Not a member?<a style="text-decoration: none;" href="../frontend/signup-menu.html"><span>  Signup now</span></a></p>
-                </div> -->
-                <form id="login-form" method="POST" action="login-api.php">
-                    <div class="signup-top">
-                      <h2 class="signup-header">Login</h2>
-                      
-                      <div class="input-wrap">
-                        <input type="email" id="email" name="email" required placeholder="Email">
-                      </div>
-                      
-                      <div class="input-wrap">
-                        <input type="password" id="password" name="password" required placeholder="Password">
-                      </div>
-                      
-                      <div class="input-wrap">
-                        <button type="button" onclick="login()">Login</button>
-                      </div>
-                      
-                      <div id="error-message">
-                        <?php echo isset($_SESSION['error_message']) ? $_SESSION['error_message'] : ''; ?>
-                      </div>
-                      
-                      <p class="terms">Not a member?<a style="text-decoration: none;" href="../frontend/signup-menu.html"><span>  Signup now</span></a></p>
-                    </div>
-                  </form>
-                  
-               
             </div>
             </div>
-
-            <script src="login.js"></script>
-
+                         
         </div>
+        
+
     </div>
     <footer class="footer">
         <div class="slogan">
             <div><img class="logo" src="./images/PngItem_5154167.png" alt="Logo"></div><br>
             <div><b>Hospital</b></div><br>
-            <div
-                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                Beirut, Lebanon</div>
-            <div
-                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            </div>
+            <div style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Beirut, Lebanon</div>
+             <div style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></div>
 
         </div>
         <div class="socialmedia">
@@ -135,13 +114,12 @@
                 </form>
             </div>
             <div class="space"></div>
-
+            
 
         </div>
 
         </div>
     </footer>
-    
+    <script src="../js/login.js"></script>
 </body>
-
 </html>

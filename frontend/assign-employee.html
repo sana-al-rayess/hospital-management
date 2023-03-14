@@ -3,7 +3,7 @@
 
 <head>
     <title>Admin-Assign a user</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../styles/admin.css">
 </head>
 
 
@@ -21,12 +21,12 @@
 </header>
 
 
-<h1>Assign Patient to Hospital</h1><br><br>
+<h1>Assign Employee to Hospital</h1><br><br>
 <form>
 
-    <body onload="loadHospitals(), getUsers()"></body>
+    <body onload="loadHospitals(), getEmployees()"></body>
     <form>
-        <!-- <label for="user-dropdown">Select a user:</label> -->
+        <!-- <label for="user-dropdown">Select an Employee:</label> -->
         <select id="user-dropdown">
             <option value="" selected>Select a user</option>
         </select><br><br>
@@ -38,6 +38,8 @@
 
 
         <br><br>
+        <label for="ssn">SSN:</label>
+        <input type="text" id="ssn"><br><br>
 
         <label for="date-joined">Date Joined:</label>
         <input type="date" id="date-joined"><br><br>
@@ -45,19 +47,17 @@
         <label for="date-left">Date Left:</label>
         <input type="date" id="date-left"><br><br>
 
-        <label for="active-dropdown">Active:</label>
-        <select id="active-dropdown">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select><br><br>
+        <label for="position">Position:</label>
+        <input type="text" id="position">
+        <br><br>
 
-        <input type="button" value="Assign Patient" onclick="assignPatient()">
+        <input type="button" value="Assign Employee" onclick="assignEmployee()">
     </form>
 
     <div id="message"></div>
 
 </form>
-<script src="admin.js"></script>
+<script src="../js/admin.js"></script>
 
 </body>
 
